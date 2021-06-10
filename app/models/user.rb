@@ -13,5 +13,6 @@ class User < ApplicationRecord
 
   def on_jwt_dispatch(token, payload)
     super 
+    byebug 
   end       
 end
