@@ -24,6 +24,7 @@ Devise.setup do |config|
     #                   }
     # jwt.dispatch_requests = [['POST', %r{^api/v1/users/sign_in([.]json)?$}]]
     # jwt.revocation_requests = [['DELETE', %r{^api/v1/users/sign_out([.]json)?$}]]
+    jwt.dispatch_requests = [['POST', %r{^/api/v1/sign_in$}]]
   end
 
 

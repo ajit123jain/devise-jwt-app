@@ -12,6 +12,7 @@ Rails.application.routes.draw do
           registrations: 'api/v1/users/registrations'
       }        
       get '/member-data', to: 'members#show'
+      post '/sign_in' => 'home#sign_in_user', as: :sign_in_user
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
