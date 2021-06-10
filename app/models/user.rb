@@ -3,8 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   # devise :database_authenticatable, :registerable,
   #        :recoverable, :rememberable, :validatable
+  include Devise::JWT::RevocationStrategies::Allowlist
+
+
   devise :database_authenticatable,
          :jwt_authenticatable,
          :registerable,
-         jwt_revocation_strategy: JwtDenylist
+         jwt_revocation_strategy: self
 end
