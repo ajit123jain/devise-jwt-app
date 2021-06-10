@@ -11,8 +11,7 @@ class User < ApplicationRecord
          :registerable,
          jwt_revocation_strategy: self
 
-  def on_jwt_dispatch(token, payload)
+  def on_jwt_dispatch(token, payload) 
     super 
-    byebug 
   end       
 end
