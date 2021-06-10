@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+class Admin < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   # devise :database_authenticatable, :registerable,
@@ -9,12 +9,13 @@ class User < ApplicationRecord
                         as: :business,
                         dependent:   :destroy
 
+
   devise :database_authenticatable,
          :jwt_authenticatable,
          :registerable,
          jwt_revocation_strategy: self
 
-  def on_jwt_dispatch(token, payload)  
-    super
+  def on_jwt_dispatch(token, payload) 
+    super 
   end       
 end

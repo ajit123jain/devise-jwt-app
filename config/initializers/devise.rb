@@ -20,6 +20,7 @@ Devise.setup do |config|
     jwt.expiration_time = 2.weeks.to_i
     # jwt.request_formats = {
     #                     user: [nil, :json],
+    #                     admin: [nil, :json]
     #                   }
     # jwt.dispatch_requests = [['POST', %r{^api/v1/users/sign_in([.]json)?$}]]
     # jwt.revocation_requests = [['DELETE', %r{^api/v1/users/sign_out([.]json)?$}]]
