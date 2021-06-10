@@ -10,4 +10,8 @@ class User < ApplicationRecord
          :jwt_authenticatable,
          :registerable,
          jwt_revocation_strategy: self
+
+  def on_jwt_dispatch(token, payload)
+    super 
+  end       
 end

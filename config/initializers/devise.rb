@@ -17,6 +17,7 @@ Devise.setup do |config|
   # config.secret_key = '70701147318e6899062cb91e6c218cb762406746fd03100337f298000484213fe8a8bd66114810210232c62b911c45d24f2c03cb03df7de456d7887f81e55516'
   config.jwt do |jwt|
     jwt.secret = Rails.application.credentials.devise[:jwt_secret_key]
+    jwt.expiration_time = 2.weeks.to_i
   end
 
 
